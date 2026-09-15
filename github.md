@@ -67,5 +67,5 @@
 
 * 本地数据到云端同步（增，删，改） **上传可以是以目录为单位，也可以是单个文件**
 * 使用`git remote`命令创建ssh地址别名
-  * `git remote add origin 地址`
+  * `git remote add origin origin git@github.com:kskbl-zdjd/colinstudy.git`
   * `git remote remove origin`删除别名
