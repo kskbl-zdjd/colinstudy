@@ -69,3 +69,21 @@
 * 使用`git remote`命令创建ssh地址别名
   * `git remote add origin origin git@github.com:kskbl-zdjd/colinstudy.git`
   * `git remote remove origin`删除别名
+* 从本地发送文件到云端，相关命令
+  * `git add test.cpp` 从开发主机发送到git缓冲区
+    * `git status` 查看缓冲区
+    * `git rm file` 从缓冲区中删除
+    * `git restore file` 如果本地磁盘删除，可以通过此命令恢复
+  * `git commit -m "说明"` 通过提交命令，将数据提交到本地仓库
+    * 用户的每次提交commit系统进行代码的备份，进行交叉对比，有一个提交列表，存储这些备份，可以通过提交功能，回溯到任意时刻删除或修改的位置
+  * `git push origin master` 将本地master数据推送到origin指向的云端仓库中
+
+[数据提交一图流](https://img.remit.ee/i/1cKdXytEZgeu)
+
+<!--如果要进行删除的更新，那么逻辑是一样的，本地先删除，然后将这个删除同步到云端，如果push失败，大概率是本地数据与云端不一致导致，先pull拉回去，修正后再次push-->
+
+## 下载开源项目
+
+所有以git仓库为单位的操作都与开发有关，只是打包下载开源代码和资源文件而已
+
+**命令下载：** `git clone 工程https地址`
